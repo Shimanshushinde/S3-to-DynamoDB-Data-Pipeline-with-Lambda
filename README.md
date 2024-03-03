@@ -2,6 +2,7 @@
 This guide is to create a project where data from an S3 bucket triggers a Lambda function to copy information into DynamoDB.
 
 # Architecture of the Project
+![Untitled Diagram](https://github.com/Shimanshushinde/3-Tier-WebAap-Architecture/assets/137445826/9c0dcfde-233f-48ce-b3b3-2c112ff5ca1d)
 
 ## Prerequisites
 Before proceeding, ensure the following:
