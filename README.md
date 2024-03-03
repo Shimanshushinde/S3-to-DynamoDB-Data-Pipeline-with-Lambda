@@ -1,6 +1,8 @@
 # Amazon S3 to DynamoDB Data Pipeline with Lambda.
 This guide is to create a project where data from an S3 bucket triggers a Lambda function to copy information into DynamoDB.
 
+# Architecture of the Project
+
 ## Steps To Deploy
 ### Step 1: Create an S3 Bucket
 - Go to the AWS Management Console and navigate to the S3 service.
