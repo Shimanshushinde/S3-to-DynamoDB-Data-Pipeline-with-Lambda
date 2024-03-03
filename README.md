@@ -3,6 +3,13 @@ This guide is to create a project where data from an S3 bucket triggers a Lambda
 
 # Architecture of the Project
 
+## Prerequisites
+Before proceeding, ensure the following:
+
+- AWS account with necessary permissions.
+- Familiarity with the AWS Management Console.
+- Familiarity with AWS Lambda, S3, and DynamoDB.
+  
 ## Steps To Deploy
 ### Step 1: Create an S3 Bucket
 - Go to the AWS Management Console and navigate to the S3 service.
