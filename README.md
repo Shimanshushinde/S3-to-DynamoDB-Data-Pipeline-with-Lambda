@@ -24,7 +24,23 @@ Before proceeding, ensure the following:
 - Go to the Lambda service in the AWS Management Console.
 - Create a new Lambda function with a trigger from the S3 bucket.
 - Write your code to handle the event triggered by the S3 upload. This code will read the file from S3 and write data to DynamoDB.
+```sh
+import boto3
+from uuid import uuid4
+def lambda_handler(event, context):
+    s3 = boto3.client("s3")
+    dynamodb = boto3.resource('dynamodb')
+    for record in event['Records']:
+        bucket_name = record['s3']['bucket']['name']
+        object_key = record['s3']['object']['key']
+        size = record['s3']['object'].get('size', -1)
+        event_name = record ['eventName']
+        event_time = record['eventTime']
+        dynamoTable = dynamodb.Table('newtable')
+        dynamoTable.put_item(
+            Item={'unique': str(uuid4()), 'Bucket': bucket_name, 'Object': object_key,'Size': size, 'Event': event_name, 'EventTime': event_time})
 
+```
 ### Step 4: IAM Role for Lambda
 - Ensure that your Lambda function has permissions to access both S3 and DynamoDB.
 - Create an IAM role with policies granting access to S3 and DynamoDB, and attach it to your Lambda function.
