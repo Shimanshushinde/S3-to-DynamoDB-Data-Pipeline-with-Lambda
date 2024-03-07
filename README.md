@@ -1,5 +1,5 @@
 # Amazon S3 to DynamoDB Data Pipeline with Lambda.
-This guide is to create a project where data from an S3 bucket triggers a Lambda function to copy information into DynamoDB.
+This project aims to automate the process of triggering an AWS Lambda function upon the arrival of new data in an S3 bucket. The Lambda function is designed to extract relevant information from the newly uploaded data and store it in DynamoDB for further processing and analysis.
 
 # Architecture of the Project
 ![Untitled Diagram](https://github.com/Shimanshushinde/3-Tier-WebAap-Architecture/assets/137445826/9c0dcfde-233f-48ce-b3b3-2c112ff5ca1d)
